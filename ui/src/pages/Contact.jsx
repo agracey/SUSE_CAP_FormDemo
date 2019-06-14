@@ -86,8 +86,8 @@ class Contact extends PageComponent {
     super(props);
     this.state = {
       text:'',
-      name:'',
-      email:'',
+      name:'Some Rando',
+      email:'susetmdemo@gmail.com',
       submitted:false,
       modalIsOpen: false
     }
@@ -130,7 +130,7 @@ class Contact extends PageComponent {
         <ContactSection name="form">
 
           <h3>
-            Please contact us using the form below. 2
+            Please contact us using the form below. 
           </h3>
           <h4>
             We appreciate any and all feedback! 
@@ -149,7 +149,7 @@ class Contact extends PageComponent {
               <Label htmlFor="name">Email</Label>
               <Input type="email" value={this.state.email} 
                 onChange={this.setter('email')}
-                placeholder="admin@example.com" required />
+                placeholder="blah@example.com" required />
             </Group>
 
             <Group>
@@ -229,12 +229,12 @@ class Contact extends PageComponent {
         <div>
           On submitting this form:
             <ol>
-              <li>A GraphQL API gets the data</li>
-              <li>The data gets put into a queue with Azure's Service Bus</li>
+              <li>The first service with an API recieves the data</li>
+              <li>The data gets put into a queue with Amazon's Simple Query Service</li>
               <li>A second service accepts the work</li>
-              <li>The answers get analyzed with the Azure Cognitive Services</li>
+              <li>The answers get analyzed with Amazon Comprehend</li>
               <li>The scores generated get added into the data</li>
-              <li>The combined data get emailed using MailJet (billed through Azure)</li>
+              <li>The combined data get emailed using Amazon Simple Email Service</li>
             </ol>
             Please check your email now.
         </div>

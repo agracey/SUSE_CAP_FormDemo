@@ -9,3 +9,4 @@ applications:
   - message-bus
   env:
     REGION: us-west-2
+    SENDER_EMAIL: andrew.gracey@suse.com

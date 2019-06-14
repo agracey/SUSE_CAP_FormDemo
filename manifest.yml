@@ -13,7 +13,6 @@ applications:
   - message-bus
   env:
     REGION: us-west-2
-
   routes:
   -  route:  demo.cap.susedemos.com/gql
   -  route:  demo.cap.susedemos.com/graphql
@@ -28,6 +27,7 @@ applications:
   - message-bus
   env:
     REGION: us-west-2
+    SENDER_EMAIL: andrew.gracey@suse.com
 
 
 #  - deploy app

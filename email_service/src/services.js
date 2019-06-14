@@ -18,8 +18,8 @@ var AWS = require('aws-sdk');
 const sqs_service = JSON.parse(process.env.VCAP_SERVICES).sqs.find(({instance_name})=>(instance_name == 'message-bus'))
 
 const sender_email_address = process.env.SENDER_EMAIL
-
 const queue_url = sqs_service.credentials.QUEUE_URL
+
 // Set the region 
 AWS.config.update({
   region: process.env.REGION,
