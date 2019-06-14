@@ -1,0 +1,21 @@
+{
+  "name": "email_service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@azure/service-bus": "^1.0.0-preview.3",
+    "aws-sdk": "^2.474.0",
+    "cognitive-services": "^1.2.3",
+    "node-mailjet": "^3.3.1",
+    "sqs-consumer": "^5.3.0"
+  },
+  "engines": {
+    "node": "10.15.0"
+  }
+}

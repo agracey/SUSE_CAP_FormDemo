@@ -1,0 +1,11 @@
+---
+applications:
+- name: form-email-service
+  buildpack: nodejs_buildpack
+  no-route: true
+  health-check-type: process
+  command: npm run start
+  services:
+  - message-bus
+  env:
+    REGION: us-west-2

@@ -1,0 +1,7 @@
+---
+applications:
+- name: form-react-ui
+  buildpack: staticfile_buildpack
+  root: dist/
+  routes:
+  - demo.cap.susedemos.com/

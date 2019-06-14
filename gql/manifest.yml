@@ -1,0 +1,12 @@
+---
+applications:
+- name: form-gql-api
+  buildpacks: [ nodejs_buildpack ]
+  command: npm run start    
+  services:
+  - message-bus
+  env:
+    REGION: us-west-2
+
+  routes:
+  - demo.cap.susedemos.com/graphql

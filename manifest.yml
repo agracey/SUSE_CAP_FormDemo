@@ -1,0 +1,38 @@
+---
+applications:
+- name: form-react-ui
+  path: ./ui
+  buildpacks: [ staticfile_buildpack ]
+  routes:
+  - route: demo.cap.susedemos.com/
+- name: form-gql-api
+  path: ./gql
+  buildpacks: [ nodejs_buildpack ]
+  command: npm run start    
+  services:
+  - message-bus
+  env:
+    REGION: us-west-2
+
+  routes:
+  -  route:  demo.cap.susedemos.com/graphql
+
+- name: form-email-service
+  path: ./email_service
+  buildpacks: [ nodejs_buildpack ]
+  no-route: true
+  health-check-type: process
+  command: npm run start
+  services:
+  - message-bus
+  env:
+    REGION: us-west-2
+
+
+#  - deploy app
+#  - deploy service
+#  - connect app to service
+#  - show running in k8s with stratos / and cli
+#  - show stratos features
+#  - - depends on canary
+
