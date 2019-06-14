@@ -1,7 +1,7 @@
 module.exports = [
   {
     "name":"Good",
-    "value":"My experience with the Chameleon Emporium was very good! The staff was frendly and knowledgable. I am very happy with my purchase/"
+    "value":"My experience with the Chameleon Emporium was very good! The staff was friendly and knowledgable. I am very happy with my purchase! I'll tell everyone about you guys!"
   },
   {
     "name":"Bad",
@@ -9,6 +9,6 @@ module.exports = [
   },
   {
     "name":"So-So",
-    "value":"There was some "
+    "value":"My experiece was decent. The team were helpful but it took way longer than I would have expected. It took too long to get my new pet :("
   }
 ]

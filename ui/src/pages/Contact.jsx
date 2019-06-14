@@ -86,7 +86,7 @@ class Contact extends PageComponent {
     super(props);
     this.state = {
       text:'',
-      name:'Some Rando',
+      name:'Some Random Person',
       email:'susetmdemo@gmail.com',
       submitted:false,
       modalIsOpen: false

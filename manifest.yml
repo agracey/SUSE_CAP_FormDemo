@@ -28,12 +28,3 @@ applications:
   env:
     REGION: us-west-2
     SENDER_EMAIL: andrew.gracey@suse.com
-
-
-#  - deploy app
-#  - deploy service
-#  - connect app to service
-#  - show running in k8s with stratos / and cli
-#  - show stratos features
-#  - - depends on canary
-
