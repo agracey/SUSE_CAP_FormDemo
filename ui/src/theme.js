@@ -1,17 +1,17 @@
 const style = {
   font: {
-    text: '"Gotham Regular"',
-    heading:'"Gotham Medium"'
+    text: 'sans-serif',
+    heading:'sans-serif'
   },
   colors: {
     primary: {
       light: '#02D35F',
-      dark: '#0D2C40'
+      dark: '#133459'
     },
     secondary: {
-      lightGreen: '#02D35F',
-      darkGreen: '#0D2C40',
-      blueGreen: '#00B2A9',
+      lightGreen: '#b8d774',
+      darkGreen: '#6cbf5b',
+      blueGreen: '#03b285',
       greyBlue: '#68D2DF',
       blue: '#00B5E2',
       darkBlue: '#0007B7',

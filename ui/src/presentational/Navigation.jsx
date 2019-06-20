@@ -10,30 +10,35 @@ const Navbar = styled.nav`
 const NavList = styled.ul`
   list-style-type: none;
   margin: auto;
-  width: 512px;
+  width: max-content;
 `
 
 const NavItem = styled.li`
   float: left;
-  width: 96px;
+  width: 128px;
   text-align: center;
   font-family: ${props => props.theme.font.heading};
+  font-size: 12px;
+  font-weight: bold;
 
-  background-color: ${props => props.theme.colors.secondary.blueGreen};
-  border-left: grey 1px solid;
+  background-color: ${props => props.theme.colors.secondary.lightGreen};
+  margin-right: 4px;
+  margin-left: 4px;
+
+
+
+  border-radius: 4px;
 
   &:first-child{
-    border-top-left-radius:8px;
-    border-bottom-left-radius:8px;
     border-left: none;
   } 
   
   &:last-child{
-    border-top-right-radius:8px;
-    border-bottom-right-radius:8px;
+    border-right: none;
+    background-color: ${props => props.theme.colors.secondary.darkGreen};
   }
 
-  padding:8px;
+  padding:12px;
   display:        inline-block;
 `
 

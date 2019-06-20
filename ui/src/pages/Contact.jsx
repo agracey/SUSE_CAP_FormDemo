@@ -15,11 +15,13 @@ const ContactSection = styled(GridSection)`
   font-size: 32px;
   font-weight: bolder;
   text-align: center;
-  color: ${props => props.theme.colors.primary.light };
-  background-color: ${props => props.theme.colors.primary.dark };
+  color: ${props => props.theme.colors.mono.white };
+  background-color: transparent;
 
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+  & > h4 {
+    color: ${props => props.theme.colors.secondary.darkGreen };
+  }
+
 `
 
 const ContactForm = styled.form`
@@ -33,39 +35,52 @@ const ContactForm = styled.form`
 `
 
 const Group = styled.div.attrs({className:'form-group'})`
-width: 50%;
-padding-right: 8px;
+  width: 50%;
+  padding-right: 8px;
 `
 
 const Label = styled.label.attrs({className:''})`
   text-align: left;
-  text-indent: 16px;
-  padding-top: 8px;
+  padding-top: 12px;
   padding-bottom: 2px;
-  font-size: smaller;
-  font-weight: normal;
+  font-size: 20px;
+  font-weight: bold;
   width: 100%;
 `
 
 const Input = styled.input.attrs({className:'form-control'})`
-text-align: left;
-
+  text-align: left;
 `
 
 const TextArea = styled.textarea.attrs({className:'form-control'})`
 text-align: left;
 
 `
-const Button = styled.button.attrs({className:'btn btn-primary'})`
+const Submit = styled.button.attrs({className:'btn btn-primary'})`
 width: 25%;
 margin: 8px;
-margin-left: 16px;
+float: right;
+margin-right: 16px;
+border-radius: 4px;
+background-color: ${props => props.theme.colors.secondary.darkGreen};
+border-color: ${props => props.theme.colors.secondary.darkGreen};
+&:hover {
+  background-color: ${props => props.theme.colors.secondary.lightGreen};
+  border-color: ${props => props.theme.colors.secondary.lightGreen};
+}
 `
 
 const Prepared = styled.input.attrs({className:'btn btn-primary'})`
-width: 25%;
-margin: 8px;
-margin-left: 16px;
+float: left;
+border-radius: 0px;
+width: 128px;
+margin-right: 16px;
+background-color: ${props => props.theme.colors.secondary.blueGreen};
+border-color: ${props => props.theme.colors.secondary.blueGreen};
+&:hover {
+  background-color: ${props => props.theme.colors.secondary.darkGreen};
+  border-color: ${props => props.theme.colors.secondary.darkGreen};
+}
 `
 
 
@@ -162,13 +177,13 @@ class Contact extends PageComponent {
 
             {this.renderPrepared()}
 
+            <Label htmlFor="comments">Comments</Label>
             <TextArea 
               value={this.state.text} 
               onChange={this.setter('text')}
               placeholder="Your comments here"
               rows={7}
             />
-
             {this.renderSubmit()}
           </ContactForm>
     )
@@ -197,12 +212,12 @@ class Contact extends PageComponent {
 
   renderSubmit() {
     return (
-      <Button 
+      <Submit 
         onClick={this.handleSubmit.bind(this)}
         disabled={this.state.submitted}
       >
         Submit
-      </Button>
+      </Submit>
     )
   }
 

@@ -5,6 +5,8 @@ applications:
   buildpacks: [ staticfile_buildpack ]
   routes:
   - route: demo.cap.susedemos.com/
+
+
 - name: form-gql-api
   path: ./gql
   buildpacks: [ nodejs_buildpack ]
@@ -16,6 +18,7 @@ applications:
   routes:
   -  route:  demo.cap.susedemos.com/gql
   -  route:  demo.cap.susedemos.com/graphql
+
 
 - name: form-email-service
   path: ./email_service
