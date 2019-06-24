@@ -32,7 +32,7 @@ services.listen(async (msg)=>{
   console.log('Answers',JSON.stringify(answers))
   const emailText = buildBody(msg.MessageAttributes.name.StringValue, answers)
 
-  await services.sendEmail(msg.MessageAttributes.email.StringValue, 'Test', emailText)
+  await services.sendEmail(msg.MessageAttributes.email.StringValue, 'Feedback from '+ msg.MessageAttributes.name.StringValue, emailText)
 
   return true
 })

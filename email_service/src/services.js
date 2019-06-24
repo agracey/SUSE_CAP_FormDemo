@@ -14,11 +14,11 @@ var AWS = require('aws-sdk');
 //   console.log('SQS service not found. Exiting',JSON.stringify(process.env,null, 2))
 //   process.exit(1)
 // }
+const sender_email_address = process.env.SENDER_EMAIL
 
 const sqs_service = JSON.parse(process.env.VCAP_SERVICES).sqs.find(({instance_name})=>(instance_name == 'message-bus'))
-
-const sender_email_address = process.env.SENDER_EMAIL
 const queue_url = sqs_service.credentials.QUEUE_URL
+
 
 // Set the region 
 AWS.config.update({
