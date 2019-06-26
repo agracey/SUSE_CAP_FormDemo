@@ -25,8 +25,8 @@ AWS.config.update({
   region: process.env.REGION,
   accessKeyId: sqs_service.credentials.SQS_AWS_ACCESS_KEY_ID,
   secretAccessKey: sqs_service.credentials.SQS_AWS_SECRET_ACCESS_KEY
-
 })
+
 const ses = new AWS.SES()
 const sqs = new AWS.SQS()
 const comprehend = new AWS.Comprehend();
