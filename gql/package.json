@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "@azure/service-bus": "^1.0.0-preview.3",
-    "apollo-server": "^2.4.8",
+    "apollo-server": "^2.14.2",
     "aws-sdk": "^2.474.0",
     "graphql": "^14.2.1"
   },
